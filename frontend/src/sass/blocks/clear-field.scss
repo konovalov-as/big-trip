@@ -1,0 +1,30 @@
+.clear-field {
+  position: relative;
+
+  &__input {
+    &:hover ~ .clear-field__btn--show,
+    &:focus ~ .clear-field__btn--show {
+      display: block;
+    }
+  }
+
+  &__btn {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    padding: 0 10px;
+    border: none;
+    background-color: transparent;
+
+    & svg {
+      width: 16px;
+      height: 16px;
+      stroke: $color-charcoal;
+    }
+  }
+}

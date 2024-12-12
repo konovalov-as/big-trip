@@ -1,0 +1,107 @@
+[
+  {
+      "id": "44130ffd-1c80-400c-930c-39ca664ebebb",
+      "description": "Moscow - a true asian pearl",
+      "name": "Moscow",
+      "pictures": []
+  },
+  {
+      "id": "b8b86565-a555-4d90-accd-33ca9a2dc7f5",
+      "description": "Tokio - with crowded streets",
+      "name": "Tokio",
+      "pictures": [
+          {
+              "src": "https://22.objects.htmlacademy.pro/static/destinations/3.jpg",
+              "description": "Tokio in a middle of Europe"
+          },
+          {
+              "src": "https://22.objects.htmlacademy.pro/static/destinations/11.jpg",
+              "description": "Tokio full of of cozy canteens where you can try the best coffee in the Middle East"
+          },
+          {
+              "src": "https://22.objects.htmlacademy.pro/static/destinations/9.jpg",
+              "description": "Tokio is a beautiful city"
+          }
+      ]
+  },
+  {
+      "id": "9064a703-1be8-4ca7-98e5-00afa0334389",
+      "description": "Helsinki - with crowded streets",
+      "name": "Helsinki",
+      "pictures": [
+          {
+              "src": "https://22.objects.htmlacademy.pro/static/destinations/7.jpg",
+              "description": "Helsinki with crowded streets"
+          },
+          {
+              "src": "https://22.objects.htmlacademy.pro/static/destinations/6.jpg",
+              "description": "Helsinki middle-eastern paradise"
+          }
+      ]
+  },
+  {
+      "id": "8f7eb17c-48be-4c27-8a2f-f77e1231ea62",
+      "description": "Saint Petersburg - for those who value comfort and coziness",
+      "name": "Saint Petersburg",
+      "pictures": [
+          {
+              "src": "https://22.objects.htmlacademy.pro/static/destinations/18.jpg",
+              "description": "Saint Petersburg for those who value comfort and coziness"
+          },
+          {
+              "src": "https://22.objects.htmlacademy.pro/static/destinations/13.jpg",
+              "description": "Saint Petersburg with crowded streets"
+          }
+      ]
+  },
+  {
+      "id": "d3d4f059-0e5a-4f98-a4d7-1742acb46cf7",
+      "description": "Monaco - full of of cozy canteens where you can try the best coffee in the Middle East",
+      "name": "Monaco",
+      "pictures": [
+          {
+              "src": "https://22.objects.htmlacademy.pro/static/destinations/19.jpg",
+              "description": "Monaco is a beautiful city"
+          }
+      ]
+  },
+  {
+      "id": "a67231ee-4d91-42a0-831c-fd3019c95248",
+      "description": "Kopenhagen - with crowded streets",
+      "name": "Kopenhagen",
+      "pictures": [
+          {
+              "src": "https://22.objects.htmlacademy.pro/static/destinations/6.jpg",
+              "description": "Kopenhagen a true asian pearl"
+          },
+          {
+              "src": "https://22.objects.htmlacademy.pro/static/destinations/19.jpg",
+              "description": "Kopenhagen a perfect place to stay with a family"
+          }
+      ]
+  },
+  {
+      "id": "054e47b3-9a3b-456d-92c9-7a5bcdfb822e",
+      "description": "",
+      "name": "Chamonix",
+      "pictures": []
+  },
+  {
+      "id": "17455af0-b161-4035-b67d-037658b33364",
+      "description": "Naples - with crowded streets",
+      "name": "Naples",
+      "pictures": []
+  },
+  {
+      "id": "2ea77218-eb65-4a49-84e6-e9d47ae292aa",
+      "description": "",
+      "name": "Milan",
+      "pictures": []
+  },
+  {
+      "id": "f493218d-1ac8-4454-a707-24d8f9a89423",
+      "description": "Geneva - is a beautiful city",
+      "name": "Geneva",
+      "pictures": []
+  }
+]

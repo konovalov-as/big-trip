@@ -1,0 +1,27 @@
+.spinner {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: block;
+  margin:15px auto;
+  position: relative;
+  background: rgba($color-dodger-blue, 0.5);
+  box-shadow: -24px 0 rgba($color-dodger-blue, 0.5), 24px 0 rgba($color-dodger-blue, 0.5);
+  box-sizing: border-box;
+  animation: shadowPulse 1.5s linear infinite;
+}
+
+@keyframes shadowPulse {
+  33% {
+    background: $color-white-smoke;
+    box-shadow: -24px 0 $color-dodger-blue, 24px 0 $color-white-smoke;
+  }
+  66% {
+    background: $color-dodger-blue;
+    box-shadow: -24px 0 $color-white-smoke, 24px 0 $color-white-smoke;
+  }
+  100% {
+    background: $color-white-smoke;
+    box-shadow: -24px 0 $color-white-smoke, 24px 0 $color-dodger-blue;
+  }
+}

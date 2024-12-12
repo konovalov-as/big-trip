@@ -1,0 +1,50 @@
+.trip-info {
+  display: flex;
+  align-items: center;
+
+  @include vp-767 {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__main {
+    flex-basis: 70%;
+
+    @include vp-767 {
+      flex-basis: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 4px;
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 21px;
+  }
+
+  &__dates {
+    margin: 0;
+    font-weight: 800;
+    font-size: 13px;
+    line-height: 16px;
+    text-transform: uppercase;
+    opacity: 0.8;
+  }
+
+  &__cost {
+    flex-basis: 30%;
+    margin: 0 0 0 auto;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 25px;
+    text-align: right;
+
+    @include vp-767 {
+      flex-basis: 100%;
+      margin-left: 0;
+      text-align: left;
+    }
+  }
+}

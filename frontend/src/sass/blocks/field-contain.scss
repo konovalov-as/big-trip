@@ -1,0 +1,115 @@
+.field-contain {
+  &.focused .field-contain__placeholder-text {
+    top: 0;
+    font-size: 12px;
+    line-height: 12px;
+    color: $color-navy-blue;
+  }
+
+  &__wrap {
+    position: relative;
+    // margin-bottom: 5px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 9px 16px;
+    border-radius: 8px;
+    border: 2px solid $color-silver;
+    color: $color-tangaroa;
+    transition: border-color $trans-default, transform $trans-default;
+    background-color: transparent;
+    font-size: 16px;
+    outline: none;
+
+    &:hover {
+      outline: none;
+      border-color: $color-tangaroa;
+    }
+
+    &:focus {
+      border-color: $color-navy-blue;
+    }
+
+    &:focus + .field-contain__placeholder-text .field-contain__text {
+      color: $color-navy-blue;
+      background-color: $color-default-white;
+      transform: translate(0, -90%);
+      transition: border-color $trans-default, color $trans-default, transform $trans-default;
+    }
+  }
+
+  &__select {
+    & option {
+      background-color: $color-default-white;
+    }
+  }
+
+  &__placeholder-text {
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    transform: translateY(-50%);
+    border: 3px solid transparent;
+    background-color: $color-default-white;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    color: $color-matisse;
+    font-size: 16px;
+    transition: top $trans-default, font-size $trans-default, color $trans-default, transform $trans-default;
+  }
+
+  &__text {
+    //transition: transform $trans-default, font-size $trans-default, background-color $trans-default, color $trans-default;
+    //font-size: 14px;
+    //padding: 0 0.5rem;
+
+    &--focus {
+      //background-color: $color-default-white;
+      //transform: translate(0, -90%);
+    }
+  }
+
+  &__icon {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+
+    & svg {
+      margin: auto;
+      width: 24px;
+      height: 24px;
+      fill: rgba($color-default-black, 0.5);
+    }
+
+    &--password {
+      padding: 8px 12px;
+      border-radius: 50%;
+      overflow: visible;
+      color: rgba($color-default-black, 0.54);
+      margin-right: -12px;
+      transition: background-color $trans-default;
+
+      &:hover,
+      &:focus {
+        background-color: rgba($color-default-black, 0.04);
+      }
+
+      &:active {
+        background-color: rgba($color-default-black, 0.08);
+      }
+    }
+  }
+
+  &__message {
+    color: $color-crimson;
+    //margin-bottom: 5px;
+  }
+}

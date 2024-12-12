@@ -1,0 +1,81 @@
+.trip-sort {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1.5fr 1.5fr 2fr;
+
+  @include vp-1279 {
+    width: 80%;
+  }
+
+  @include vp-1023 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  @include vp-575 {
+    justify-content: space-between;
+  }
+
+  &__item {
+    font-weight: 800;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: $color-pink-swan;
+    cursor: default;
+    transition: color $trans-default;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 15px 6px 22px;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: color $trans-default;
+
+    &:hover,
+    &:focus {
+      color: $color-default-black;
+    }
+  }
+
+  &__input {
+    transition: color $trans-default;
+
+    &:checked + .trip-sort__btn {
+      position: relative;
+      color: $color-default-black;
+      border-color: $color-default-black;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 8px;
+        width: 8px;
+        height: 8px;
+        background-color: $color-kournikova;
+        border-radius: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &:disabled + .trip-sort__btn {
+      opacity: 0.6;
+
+      &:hover,
+      &:focus {
+        color: $color-pink-swan;
+        cursor: default;
+      }
+    }
+  }
+ }

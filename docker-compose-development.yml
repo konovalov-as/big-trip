@@ -1,0 +1,91 @@
+services:
+  mongodb:
+    image: mongo
+    container_name: 'mongo-db'
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+    volumes:
+      - mongodb:/data/db
+    ports:
+      - "27017:27017"
+#    networks:
+#      - big-trip-network
+
+  mongo-express:
+    image: mongo-express
+    container_name: 'mongo-admin-ui'
+    restart: unless-stopped
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: root
+      ME_CONFIG_MONGODB_URL: mongodb://root:root@mongodb:27017/
+      ME_CONFIG_SITE_BASEURL: /mongo-express
+#    networks:
+#      - big-trip-network
+
+#  frontend:
+#    build:
+#      dockerfile: Dockerfile.prod
+#      context: ./frontend
+#    image: big-trip-frontend
+##    ports:
+##      - 3000:3000
+#    container_name: big-trip-frontend
+#    restart: unless-stopped
+#    command: serve -s dist -l 3000
+#    networks:
+#      - big-trip-network
+#
+#  api:
+#    build: ./backend
+#    image: big-trip-api
+#    container_name: big-trip-api
+#    command: npm run start
+#    restart: unless-stopped
+#    environment:
+##      - PORT=9000
+#      - MONGO_URL=mongodb://api_db:27017/api
+#      # - AUTH_API_URL=http://auth:3002/api
+#      - ME_CONFIG_MONGODB_ADMINUSERNAME=root
+#      - ME_CONFIG_MONGODB_ADMINPASSWORD=root
+#      - ME_CONFIG_MONGODB_URL=mongodb://root:example@api_db:27017/
+#
+##      - APP_JWT_ACCESS_SECRET_KEY=super_very_access_secret_key_312
+##      - APP_JWT_REFRESH_SECRET_KEY=super_very_refresh_secret_key_312
+##    ports:
+##      - 9000:9000
+#    depends_on:
+#      - mongodb
+#    networks:
+#      - big-trip-network
+#
+#  nginx:
+#    image: nginx:stable-alpine
+#    container_name: big-trip-nginx
+#    ports:
+#      - 80:80
+##      - 443:443
+#    volumes:
+#      - ./nginx/nginx.conf.prod:/etc/nginx/conf.d/nginx.conf:ro
+#    depends_on:
+#      - frontend
+#      - api
+#      # - auth
+#    networks:
+#      - big-trip-network
+
+volumes:
+  mongodb:
+
+#networks:
+#  big-trip-network:
+#    driver: bridge
+#    ipam:
+#      driver: default
+#      config:
+#        - subnet: "113.113.113.0/24"
+#          gateway: "113.113.113.1"

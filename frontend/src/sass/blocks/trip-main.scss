@@ -1,0 +1,68 @@
+.trip-main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 10px;
+
+  &--hidden {
+    display: none;
+  }
+
+  &__trip-info {
+    width: 100%;
+    margin-bottom: 35px;
+
+    @include vp-1023 {
+      margin-bottom: 20px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__trip-controls {
+    margin-top: 36px;
+    flex-basis: 70%;
+
+    @include vp-767 {
+      flex-basis: 50%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    @include vp-575 {
+      flex-basis: auto;
+    }
+  }
+
+  &__event-add-btn {
+    min-width: 170px;
+    margin-left: auto;
+
+    @include vp-1023 {
+      min-width: auto;
+      padding: 10px 20px;
+      align-self: end;
+    }
+
+    @include vp-767 {
+      align-self: center;
+    }
+
+    @include vp-374 {
+      min-width: auto;
+      padding: 10px;
+    }
+
+    &:before {
+      content: "\002B\000A0";
+    }
+
+    &--hidden {
+      display: none;
+    }
+  }
+}

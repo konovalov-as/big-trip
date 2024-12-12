@@ -1,0 +1,38 @@
+.trip-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  &__btn {
+    display: block;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    text-decoration: none;
+    user-select: none;
+    color: inherit;
+    opacity: 0.8;
+    transition: opacity $trans-default;
+
+    &:not(:last-of-type) {
+      margin-right: 26px;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+
+    &--active,
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
+      cursor: default;
+    }
+  }
+}

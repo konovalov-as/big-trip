@@ -1,0 +1,33 @@
+.system-footer {
+  grid-area: footer;
+
+  &__wrapper {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background-color: $color-alice-blue;
+    box-shadow: 0 0 4px 2px rgb($color-default-black, 20%);
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 200px;
+    padding: 20px;
+
+    @include vp-575 {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__copyright {
+    margin: 0;
+  }
+
+  & .logo {
+    @include vp-575 {
+      margin: 0 auto;
+    }
+  }
+}

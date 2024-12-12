@@ -1,0 +1,57 @@
+[
+  {
+    "base_price": 1097,
+    "date_from": "2024-01-09T04:17:06.021Z",
+    "date_to": "2024-01-10T01:55:06.021Z",
+    "destination": "191a5322-8588-4e02-bbf9-bc996d881188",
+    "id": "5d6ff792-1ee8-44d1-8f0d-a6b25754255e",
+    "is_favorite": false,
+    "offers": [
+      {
+        "id": "f9d9efc1-2e84-4411-80c9-e917620ca4db",
+        "price": 104,
+        "title":"Choose meal"
+      },
+      {
+        "id": "75f2726a-89ad-4d62-b7a3-e3fed305db01",
+        "price": 115,
+        "title": "Choose seats"
+      },
+      {
+        "id": "1437d80b-6deb-486e-a5b1-41ee0a82487b",
+        "price": 129,
+        "title": "Add luggage"
+      }
+    ]
+  },
+  {
+    "base_price": 6434,
+    "date_from": "2024-01-16T05:13:06.021Z",
+    "date_to": "2024-01-16T14:30:06.021Z",
+    "destination": "191a5322-8588-4e02-bbf9-bc996d881188",
+    "id": "12daa834-1e61-4a67-807f-3b5c03ca03bb",
+    "is_favorite": false,
+    "offers": [
+      {
+        "id": "5679f066-978c-4c70-ac13-9fb7ebf828fd",
+        "price": 133,
+        "title": "Choose the time of ch"
+      },
+      {
+        "id": "782a66fa-ecdb-455e-8e01-27bc7749cc0d",
+        "price": 48,
+        "title": "Add breakfast"
+      }
+    ],
+    "type": "check-in"
+  },
+  {
+    "base_price": 9985,
+    "date_from": "2024-01-11T23:03:06.021Z",
+    "date_to": "2024-01-12T22:31:06.021Z",
+    "destination": "1c09b86e-045e-443d-a302-c938c1a6cd1a",
+    "id": "0973a552-db0c-44cf-b437-e0e46b69b3cc",
+    "is_favorite": false,
+    "offers": []
+  }
+]

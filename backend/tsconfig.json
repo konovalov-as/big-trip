@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "rootDir": "./",
+    "target": "ESNext",
+    "module": "commonjs",
+    "skipLibCheck": true,
+    "strict": true,
+    "sourceMap": true,
+    "lib": ["ESNext"],
+    "baseUrl": "./",
+    "paths": {
+      "@globals/*": ["./server/globals/*"],
+      "@controllers/*": ["./server/controllers/*"],
+      "@services/*": ["./server/services/*"],
+      "@models/*": ["./server/models/*"],
+      "@custom-types/*": ["./server/types/*"],
+      "@routes/*": ["./server/routes/*"],
+      "@middleware/*": ["./server/middleware/*"],
+      "@exceptions/*": ["./server/exceptions/*"],
+      "@dtos/*": ["./server/dtos/*"],
+      "@utils/*": ["./server/utils/*"],
+      "@data/*": ["./data/*"],
+      "@config/*": ["./config/*"]
+    },
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "experimentalDecorators": true
+  },
+  "include": ["server/**/*.ts"],
+  "exclude": ["node_modules"],
+}

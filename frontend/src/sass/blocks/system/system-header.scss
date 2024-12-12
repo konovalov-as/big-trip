@@ -1,0 +1,47 @@
+.system-header {
+  grid-area: header;
+  box-shadow: 0 0 4px 2px rgb($color-default-black, 0.2);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+
+  @include vp-1023 {
+    margin-bottom: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: calc(100% - 40px);
+  }
+
+  &__row-1 {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: $color-dodger-blue;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+
+    @include vp-1023 {
+      padding-right: 80px;
+    }
+
+    & .logo {
+      width: 42px;
+      height: 42px;
+      margin-right: 10px;
+
+      background-color: $color-default-white;
+      border-radius: 50%;
+      padding: 7px;
+
+      @include vp-575 {
+        display: none;
+      }
+    }
+  }
+
+  &__row-2 {}
+
+  &__title {
+    margin: 0;
+  }
+}

@@ -1,0 +1,81 @@
+.auth-form {
+  &__row {
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    color: $color-default-white;
+    cursor: pointer;
+    background-color: $color-dodger-blue;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 3px 1px -2px rgb($color-default-black, 0.2),
+    0 2px 2px 0px rgb($color-default-black, 0.14),
+    0 1px 5px 0px rgb($color-default-black, 0.12);
+    transition: background-color $trans-default, box-shadow $trans-default, border-color $trans-default, color $trans-default;
+    padding: 14px 22px;
+
+    &:hover,
+    &:focus {
+      background-color: $color-denim;
+      box-shadow: 0 2px 4px -1px rgb($color-default-black, 0.2),
+      0 4px 5px 0 rgb($color-default-black, 0.14),
+      0 1px 10px 0 rgb($color-default-black, 0.12);
+    }
+
+    &:active {
+      box-shadow: 0 5px 5px -3px rgb($color-default-black, 0.2),
+      0 8px 10px 1px rgb($color-default-black, 0.14),
+      0 3px 14px 2px rgb($color-default-black, 0.12);
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: $color-dark-gray;
+      box-shadow: none;
+    }
+  }
+
+  &__account {
+    margin: 0;
+    text-align: right;
+
+    &-text {
+      margin-right: 5px;
+    }
+
+    &-link {
+      text-decoration: none;
+      color: $color-dodger-blue;
+      border-bottom: 1px solid transparent;
+      transition: border-bottom-color $trans-default, color $trans-default;
+
+      &:hover,
+      &:focus {
+        border-bottom-color: $color-dodger-blue;
+      }
+
+      &:active {
+        color: rgba($color-dodger-blue, 0.7);
+        border-bottom-color: rgba($color-dodger-blue, 0.7);
+      }
+    }
+  }
+
+  &__accout-success {
+
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  &__icon {
+    width: 241px;
+    height: 241px;
+  }
+}

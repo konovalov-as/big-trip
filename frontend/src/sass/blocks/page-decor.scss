@@ -1,0 +1,44 @@
+.page-decor {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+
+  &--kind-1 {
+    display: flex;
+    align-items: flex-start;
+    padding-left: 8.3%;
+
+    @include vp-767 {
+      padding-left: 40px;
+    }
+
+    @include vp-374 {
+      padding-left: 10px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 10%;
+    width: 2px;
+    background-color: rgba($color-default-white, 0.58);
+
+    @include vp-1023 {
+      display: none;
+    }
+
+    @include vp-767 {
+      left: 60px;
+    }
+
+    @include vp-374 {
+      left: 30px;
+    }
+  }
+}

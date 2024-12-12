@@ -1,0 +1,91 @@
+$toggle-size: 60px;
+
+.system-nav-toggle {
+  display: none;
+
+  @include vp-1023 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 21px;
+    top: 1px;
+    z-index: 3;
+    padding: 0;
+    border: 1px solid $color-default-white;
+    background-color: $color-default-white;
+    box-shadow: 0 10px 20px rgba($color-default-black, 8%);
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow $trans-default;
+
+    &:hover,
+    &:focus {
+      box-shadow: rgba($color-default-black, 20%) 0 2px 4px -1px,
+        rgba($color-default-black, 14%) 0 4px 5px 0,
+        rgba($color-default-black, 12%) 0 1px 10px 0;
+
+      & .system-nav-toggle__item {
+        background-color: $color-denim;
+      }
+    }
+
+    &:active {
+      box-shadow: rgba($color-default-black, 20%) 0 5px 5px -3px,
+        rgba($color-default-black, 14%) 0 8px 10px 1px,
+        rgba($color-default-black, 12%) 0 3px 14px 2px;
+    }
+
+    &__wrapper {
+      position: relative;
+      width: $toggle-size;
+      height: $toggle-size;
+      background: $color-default-white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    &__item {
+      position: absolute;
+      width: 57%;
+      height: 5.5%;
+      background: $color-navy-blue;
+      border-radius: 5.5%;
+      transition: transform $trans-default, width $trans-default, background-color $trans-default;
+
+      &:nth-child(1) {
+        transform: translateY(-15px);
+        width: 35.71%;
+        left: 21.43%;
+      }
+
+      &:nth-child(2) {
+        transform: translateY(15px);
+        width: 21.43%;
+        left: 21.43%;
+      }
+    }
+
+    &.is-active {
+      & .system-nav-toggle__item {
+        &:nth-child(1) {
+          width: 57%;
+          transform: translateY(0px) rotate(45deg);
+          transition-delay: 0.125s;
+        }
+
+        &:nth-child(2) {
+          width: 57%;
+          transform: translateY(0px) rotate(315deg);
+          transition-delay: 0.25s;
+        }
+
+        &:nth-child(3){
+          transform: translateX(60px);
+        }
+      }
+    }
+  }
+}

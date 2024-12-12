@@ -1,0 +1,58 @@
+services:
+  mongodb:
+    image: mongo
+    container_name: 'mongo-db'
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+    volumes:
+      - mongodb:/data/db
+
+  mongo-express:
+    image: mongo-express
+    container_name: 'mongo-admin-ui'
+    restart: unless-stopped
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: root
+      ME_CONFIG_MONGODB_URL: mongodb://root:root@mongodb:27017/
+      ME_CONFIG_SITE_BASEURL: /mongo-express
+
+    depends_on:
+      - mongodb
+
+  frontend:
+    build:
+      dockerfile: Dockerfile.prod
+      context: ./frontend
+    image: big-trip-frontend
+    container_name: big-trip-frontend
+    restart: unless-stopped
+    command: serve -s dist -l 3000
+
+    depends_on:
+      - api
+
+  api:
+    build: ./backend
+    image: big-trip-api
+    container_name: big-trip-api
+    command: npm run start
+    restart: unless-stopped
+    environment:
+      - MONGO_URL=mongodb://api_db:27017/api
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=root
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=root
+      - ME_CONFIG_MONGODB_URL=mongodb://root:example@api_db:27017/
+
+    depends_on:
+      - mongodb
+
+volumes:
+  mongodb:
+
+networks:
+  default:
+    name: big-trip-network
+    external: true

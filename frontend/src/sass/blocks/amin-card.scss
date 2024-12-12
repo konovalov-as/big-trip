@@ -1,0 +1,22 @@
+.anim-card-enter {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.anim-card-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity $trans-default, transform $trans-default;
+}
+
+.amin-card-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.amin-card-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity $trans-default, transform $trans-default;
+}
+

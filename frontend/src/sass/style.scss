@@ -1,0 +1,57 @@
+// Vendor
+// ---------------------------------
+
+@import './vendor/normalize';
+
+// Global
+// ---------------------------------
+
+@import 'variables';
+@import 'mixins';
+@import 'functions';
+@import 'global/fonts';
+@import 'global/reboot';
+@import 'global/utils';
+@import 'global/container';
+
+// Blocks
+// ---------------------------------
+
+@import './blocks/fade';
+@import './blocks/alert';
+@import './blocks/page';
+@import './blocks/page-decor';
+@import './blocks/page-header';
+@import './blocks/page-main';
+@import './blocks/btn';
+@import './blocks/trip-main';
+@import './blocks/trip-info';
+//@import './blocks/trip-controls';
+//@import './blocks/trip-tabs';
+@import './blocks/trip-filters';
+@import './blocks/trip-events';
+@import './blocks/trip-sort';
+@import './blocks/event';
+@import './blocks/clear-field';
+@import "./blocks/page-auth";
+@import './blocks/auth-form';
+@import './blocks/field-contain';
+@import './blocks/title-h1';
+@import './blocks/title-h2';
+@import './blocks/upload-file';
+//@import 'locks/amin-card';
+@import './blocks/logo';
+
+
+// system
+@import './blocks/system/spinner';
+@import './blocks/system/sys-btn';
+@import './blocks/system/page-system';
+@import './blocks/system/system-header';
+@import './blocks/system/system-nav';
+@import './blocks/system/system-main';
+@import './blocks/system/system-footer';
+@import './blocks/system/data-view';
+@import './blocks/system/data-form';
+@import './blocks/system/offers';
+@import './blocks/system/system-nav-toggle';

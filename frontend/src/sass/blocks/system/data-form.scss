@@ -1,0 +1,19 @@
+.data-form {
+  &__row {
+    margin-bottom: 20px;
+
+    &--upload-file {
+      display: none;
+    }
+
+    &--file-card {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    & button:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}

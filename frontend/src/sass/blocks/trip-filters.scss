@@ -1,0 +1,46 @@
+.trip-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  &--hidden {
+    display: none;
+  }
+
+  &__filter:not(:last-of-type) {
+    margin-right: 19px;
+  }
+
+  &__filter-label {
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    user-select: none;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: opacity $trans-default;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  &__filter-input {
+    &:checked + .trip-filters__filter-label {
+      opacity: 1;
+      cursor: default;
+    }
+
+    &:disabled + .trip-filters__filter-label {
+      opacity: 0.4;
+      cursor: default;
+    }
+  }
+}

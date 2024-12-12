@@ -1,0 +1,6 @@
+.idea
+backend/node_modules
+backend/dist
+backend/logs
+backend/uploads
+frontend/node_modules

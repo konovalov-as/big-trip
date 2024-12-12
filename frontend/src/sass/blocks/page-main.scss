@@ -1,0 +1,28 @@
+.page-main {
+  display: flex;
+
+  @include vp-1023 {
+    background-color: $color-default-white;
+  }
+
+  &__section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+
+  &__msg {
+    font-weight: 500;
+    font-size: 2.7rem;
+    line-height: 3.5rem;
+    opacity: 0.89;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    &.btn {
+      display: inline-flex;
+    }
+  }
+}

@@ -1,0 +1,224 @@
+.data-view {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 0 10px;
+
+    @include vp-374 {
+      display: block;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 1.5;
+    margin: 0;
+
+    @include vp-575 {
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    @include vp-374 {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+  }
+
+  &__btn {
+    margin-left: 20px;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  &__item {
+    border-radius: 12px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: $color-alice-blue;
+  }
+
+  &__item-wrap {
+    &-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      & .data-view__item-title {
+        margin: 0;
+        margin-right: 20px;
+      }
+
+      @include vp-374 {
+        display: block;
+      }
+    }
+
+    &-row2 {
+      align-items: flex-start;
+    }
+  }
+
+  &__item-title {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  &__item-text {
+    margin: 0;
+    padding: 5px 0;
+    font-size: 18px;
+    line-height: 1.3;
+
+    &--sub {
+      padding-left: 15px;
+    }
+  }
+
+  &__item-description {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  &__item--edit {
+    background-color: $color-default-white;
+    box-shadow: 0 3px 1px -2px rgb($color-default-black, 20%),
+      0 2px 2px 0 rgb($color-default-black, 14%),
+      0 1px 5px 0 rgb($color-default-black, 12%);
+  }
+
+  &__edit-list {
+    list-style: none;
+    margin: 0;
+    padding: 0 20px;
+
+    @include vp-575 {
+      padding: 0;
+    }
+  }
+
+  &__edit-item {
+    display: flex;
+    margin-bottom: 20px;
+
+    & .field-contain {
+      margin-right: 10px;
+
+      @include vp-575 {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-right: 0;
+      }
+    }
+
+    & .data-view__action {
+      @include vp-575 {
+        margin-left: auto;
+      }
+    }
+
+    @include vp-575 {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__images {
+    margin-bottom: 20px;
+  }
+
+  &__images-list {
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__images-item {
+    width: 200px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  }
+
+  &__images-item-wrap {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 100%;
+
+    & .upload-file__file-del-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  }
+
+  &__images-image {
+    padding-bottom: 15px;
+    margin-bottom: auto;
+  }
+
+  &__action {
+    display: flex;
+    justify-content: flex-end;
+
+    &--type-1 {
+      justify-content: end;
+    }
+
+    button {
+      &:not(:last-child) {
+        margin-right: 10px;
+
+        @include vp-374 {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    @include vp-374 {
+      flex-direction: column;
+    }
+  }
+
+  &__pagination {
+    & p {
+      margin: 0;
+    }
+  }
+
+  &__decor-form {
+    box-shadow: 0 3px 1px -2px rgb($color-default-black, 20%),
+      0 2px 2px 0 rgb($color-default-black, 14%),
+      0 1px 5px 0 rgb($color-default-black, 12%);
+    margin-bottom: 20px;
+    border-radius: 12px;
+  }
+
+  &__form {
+    padding: 20px 10px;
+  }
+
+  &__row {
+    margin-bottom: 20px;
+  }
+
+  &__empty {
+    padding: 10px;
+  }
+}

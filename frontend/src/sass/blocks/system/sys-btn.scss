@@ -1,0 +1,143 @@
+.sys-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  padding: 6px 16px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.8rem;
+  line-height: 1.75;
+  text-transform: uppercase;
+  min-width: 64px;
+  border-radius: 4px;
+  transition: background-color $trans-default,
+    box-shadow $trans-default,
+    border-color $trans-default,
+    color $trans-default;
+  color: $color-default-white;
+  background-color: $color-navy-blue;
+  box-shadow: rgba($color-default-black, 20%) 0 3px 1px -2px,
+    rgba($color-default-black, 14%) 0 2px 2px 0,
+    rgba($color-default-black, 12%) 0 1px 5px 0;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-color: $color-denim;
+    box-shadow: rgba($color-default-black, 20%) 0 2px 4px -1px,
+      rgba($color-default-black, 14%) 0 4px 5px 0,
+      rgba($color-default-black, 12%) 0 1px 10px 0;
+  }
+
+  &:active {
+    box-shadow: rgba($color-default-black, 20%) 0 5px 5px -3px,
+      rgba($color-default-black, 14%) 0 8px 10px 1px,
+      rgba($color-default-black, 12%) 0 3px 14px 2px;
+  }
+
+  &:disabled {
+    background-color: $color-dark-gray;
+    cursor: auto;
+
+    &:focus,
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px,
+      rgba(0, 0, 0, 0.14) 0px 2px 2px 0px,
+      rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+    }
+  }
+
+  &--success {
+    background-color: $color-japanese-laurel;
+
+    &:hover,
+    &:focus {
+      background-color: $color-san-felix;
+    }
+  }
+
+  &--info {
+    background-color: $color-pacific-blue;
+
+    &:hover,
+    &:focus {
+      background-color: $color-cobalt;
+    }
+  }
+
+  &--warning {
+    background-color: $color-mango-tango;
+
+    &:hover,
+    &:focus {
+      background-color: $color-persimmon;
+    }
+  }
+
+  &--error {
+    background-color: $color-persian-red;
+
+    &:hover,
+    &:focus {
+      background-color: $color-persian-red-2;
+    }
+  }
+
+  & svg {
+    width: 24px;
+    height: 24px;
+    stroke: $color-default-white;
+
+    & path {
+      stroke: $color-default-white;
+    }
+  }
+
+  &--outlined {
+    color: $color-navy-blue;
+    border: 1px solid rgba($color-navy-blue, 0.5);
+    background-color: white;
+
+    &:hover,
+    &:focus {
+      background-color: rgba($color-navy-blue, 0.04);
+    }
+
+    & svg {
+      stroke: $color-navy-blue;
+
+      & path {
+        stroke: $color-navy-blue;
+      }
+    }
+
+    &-success {
+      color: $color-japanese-laurel;
+      border-color: rgb($color-japanese-laurel, 0.5);
+
+      &:hover,
+      &:focus {
+        background-color: rgba($color-japanese-laurel, 0.04);
+      }
+
+      & svg {
+        stroke: $color-japanese-laurel;
+      }
+    }
+  }
+
+  &--small {
+    min-width: 32px;
+    padding: 7px 8px;
+
+    & svg {
+      // width: 20px;
+      // height: 20px;
+    }
+  }
+
+  &--align {
+    align-self: flex-start;
+  }
+}
